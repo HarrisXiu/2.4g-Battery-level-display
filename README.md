@@ -3,7 +3,7 @@
 Windows 上查看 **2.4G 无线键鼠电量**的小工具：面板 + 托盘 + 命令行。
 
 - **不需要厂商驱动**：Cherry Utility、罗技 G HUB、雷柏驱动都不用装、不用开，直接和接收器的 HID 接口通信。
-- **单文件便携 exe**：双击即用，不需要装 Python；配置和插件都放在 exe 旁边，整个文件夹拷到哪都能用。
+- **单文件便携 exe**：[下载](https://github.com/HarrisXiu/2.4g-Battery-level-display/releases/latest)后双击即用，不需要装 Python；配置和插件都放在 exe 旁边，整个文件夹拷到哪都能用。
 - **零第三方依赖**：纯 Python 标准库 + ctypes 调系统 DLL。
 - **可扩展**：一条 JSON 或一个 Python 插件就能加新品牌 / 新型号，也可以[让 AI 帮你写插件](#用-ai-开发插件增加品牌或型号)。
 - 不联网、不写日志、不上传任何信息。
@@ -23,9 +23,19 @@ Windows 上查看 **2.4G 无线键鼠电量**的小工具：面板 + 托盘 + �
 - 未在真机验证过的设备，界面上会标「未实测」。
 - 设备休眠暂时读不到时，**沿用上次读数**并标「休眠中」，不会一会儿是数字一会儿是 `--`。
 
-## 使用
+## 下载
 
-下载 / 打包得到 `外设电量.exe` 后：
+到 **[Releases](https://github.com/HarrisXiu/2.4g-Battery-level-display/releases/latest)** 下载最新版：
+
+| 文件 | 说明 |
+|---|---|
+| `BatteryMonitor-vX.Y.Z-windows-x64.zip`（推荐） | 便携文件夹：`外设电量.exe` + `devices.json` + `plugins/`，解压到任意位置，双击 `外设电量.exe` 即用 |
+| `BatteryMonitor-vX.Y.Z.exe` | 只有程序本体，可改名为 `外设电量.exe` |
+
+系统要求 Windows 10 / 11（64 位），不需要安装 Python。exe 没有数字签名，首次运行时 SmartScreen 若提示「已保护你的电脑」，
+点「更多信息 → 仍要运行」即可。也可以[从源码打包](#从源码打包-exe)。
+
+## 使用
 
 | 命令 | 作用 |
 |---|---|
