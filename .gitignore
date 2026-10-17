@@ -1,0 +1,11 @@
+# 打包产物（exe 太大，不进仓库）
+release/
+build/
+dist/
+*.spec
+*.old.exe
+
+# 本机配置 / 缓存
+config.json
+__pycache__/
+*.pyc
